@@ -1,16 +1,24 @@
-const name = "Seonghyeon Ko";
-const age = 21;
-const weight = 104.3;
-const isMale = true;
-const money = null;
-const girfriend = undefined;
-const hobbies = "baseball, basketball, game, computer";
+const monkey = {
+    name: "ringo",
+    face: "funny",
+    age: 11,
+    food: ["banana", "apple", "strawberry"],
+    tail: true,
+    location: {
+        country: "Congo",
+        place: "forest",
+        isAfrica: true,
+    }
+}
 
-console.log(typeof girfriend);
-console.log("제 이름은 " + name + " 입니다."); //옛날 방식
-console.log(`제 이름은 ${name} 입니다.`); //요즘 방식
+//json으로 만들기
+const monkeyJSON = JSON.stringify(monkey);
 
-console.log(name.substring(0, 10).toUpperCase());
-console.log(name.split("")); //모든 글자에 대해 슬라이싱
-console.log(name.split(" ")); //띄어 쓰기를 기준으로 슬라이싱
-console.log(hobbies.split(", "));
+console.log(monkeyJSON);
+
+//접근 불가
+console.log(monkeyJSON.name);
+
+//파싱(되돌리기)
+const monkeyJSONParse = JSON.parse(monkeyJSON);
+console.log(monkeyJSONParse);
