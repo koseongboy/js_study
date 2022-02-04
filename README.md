@@ -9,3 +9,6 @@ var, let, const
 3. Boolean : T/F
 4. null : 빈 값
 5. undefined : 선언이 안 됨
+## 연산자
+1. == 값이 같은가
+2. === 값과 자료형이 같은가
